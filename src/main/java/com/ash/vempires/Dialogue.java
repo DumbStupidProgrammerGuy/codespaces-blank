@@ -25,6 +25,16 @@ class Dialogue {
             Thread.currentThread().interrupt();
         }
     }
+    public static void print(String dialogue) {
+        System.out.print("\033[38;2;200;200;200m");
+        for (int i = 0; i < dialogue.length(); i++){
+            printPart(dialogue.charAt(i));
+            if (i == dialogue.length() - 1)
+            {
+                printPart('\n');
+            }
+        }
+    }
     public static void print(Chr ch, String dialogue) {
         printCharacter(ch);
         for (int i = 0; i < dialogue.length(); i++){
@@ -39,10 +49,18 @@ class Dialogue {
     {
         String color = CharacterData.colors.get(ch);
         String displayName = CharacterData.displayNames.get(ch);
-        
+        Boolean metPlayer = CharacterData.metPlayer.get(ch);
+        System.out.println(metPlayer);
         System.out.print(color);
-        String characterTag = String.format("%s: ",
+        
+        String characterTag; 
+        if (metPlayer) {
+            characterTag = String.format("%s: ",
             displayName);
+        } else {
+            characterTag = "???: ";
+        }
+        
         for (int i = 0; i < characterTag.length(); i++)
         {
             printPart(characterTag.charAt(i));
