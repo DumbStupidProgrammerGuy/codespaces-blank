@@ -10,7 +10,7 @@ public class MeetIvan {
 
     public static void play() {
         CharacterData.withIvan = true;
-        Dialogue.print("A bandaged young man waiting outside the hospital seems to recognize you.");
+        Dialogue.print("A young man waiting outside the hospital seems to recognize you.");
         Dialogue.print(CharacterData.colors.get(Chr.Ivan) +  "???: Mark?");
         if (CharacterData.withEdmond) {
             Dialogue.print(Chr.Edmond,"Oh great, friend of yours?");

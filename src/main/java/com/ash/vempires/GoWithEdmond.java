@@ -10,9 +10,14 @@ public class GoWithEdmond {
                 Dialogue.print(Chr.Mark,"This is my friend Ivan, he recognized me on the way in. Sorry.");
                 Dialogue.print(Chr.Edmond,"*sigh* This is gonna be fun to explain. Not to mention the paperwork.");
             } else {
-                Dialogue.print(Chr.Edmond,"I trust your walk was entertaing?");
-            Dialogue.print(Chr.Mark,"It was qui—");
-            Dialogue.print(Chr.Edmond,"Yeah, I don't actually care.");
+                if (Vempires.time == "Sunset"){
+                    Dialogue.print(Chr.Edmond,"I trust your walk was entertaing?");
+                    Dialogue.print(Chr.Mark,"It was qui—");
+                } else if (Vempires.time == "Night"){
+                    Dialogue.print(Chr.Edmond,"What the hell took you so long?");
+                    Dialogue.print(Chr.Mark,"I—");
+                }
+                Dialogue.print(Chr.Edmond,"Yeah, I don't actually care.");
             }
         } else {
             Dialogue.print(Chr.Mark,"Um... it looks like the sun's done setting.");

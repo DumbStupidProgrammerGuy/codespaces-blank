@@ -1,6 +1,5 @@
 package com.ash.vempires;
 
-import com.ash.vempires.CharacterData.*;
 
 class Dialogue {
 
@@ -49,17 +48,12 @@ class Dialogue {
     {
         String color = CharacterData.colors.get(ch);
         String displayName = CharacterData.displayNames.get(ch);
-        Boolean metPlayer = CharacterData.metPlayer.get(ch);
 
         System.out.print(color);
         
         String characterTag; 
-        // if (metPlayer) {
-            characterTag = String.format("%s: ",
-            displayName);
-        // } else {
-        //     characterTag = "???: ";
-        // }
+        characterTag = String.format("%s: ",
+        displayName);
         
         for (int i = 0; i < characterTag.length(); i++)
         {
