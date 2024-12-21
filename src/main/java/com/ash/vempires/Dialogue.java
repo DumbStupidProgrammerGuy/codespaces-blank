@@ -50,16 +50,16 @@ class Dialogue {
         String color = CharacterData.colors.get(ch);
         String displayName = CharacterData.displayNames.get(ch);
         Boolean metPlayer = CharacterData.metPlayer.get(ch);
-        System.out.println(metPlayer);
+
         System.out.print(color);
         
         String characterTag; 
-        if (metPlayer) {
+        // if (metPlayer) {
             characterTag = String.format("%s: ",
             displayName);
-        } else {
-            characterTag = "???: ";
-        }
+        // } else {
+        //     characterTag = "???: ";
+        // }
         
         for (int i = 0; i < characterTag.length(); i++)
         {

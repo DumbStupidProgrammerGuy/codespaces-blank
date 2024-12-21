@@ -13,8 +13,13 @@ public class EveningWalk {
        Dialogue.print("Return to the hospital?");
        String input = scanner.nextLine(); 
        if (input.toUpperCase().equals("Y") || input.toUpperCase().equals("YES")) {
-        MeetIvan.play();
-       } //else {}
+        Dialogue.print(" ");
+        Dialogue.print(" ");
+        Dialogue.print("...");
+        Dialogue.print(" ");
+        Dialogue.print(" ");
+        GoWithEdmond.play();
+       } // else if (input.toUpperCase().equals("N") || input.toUpperCase().equals("NO")) {}
     }
 
 }
